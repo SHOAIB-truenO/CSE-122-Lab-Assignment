@@ -14,46 +14,46 @@ displaying the data with putData().*/
 #include <string>
 using namespace std;
 
-class Publication {
-protected:
-    string title;
-    float price;
-public:
-    void getData() {
-        cout << "Enter the title: ";
-        getline(cin, title);
-        cout << "Enter the price: ";
-        cin >> price;
-      cin.ignore();
+       class Publication {
+          protected:
+                          string title;
+                         float price;
+            public:
+                        void getData() {
+                         cout << "Enter the title: ";
+                        getline(cin, title);
+                        cout << "Enter the price: ";
+                                                   cin >> price;
+                                                   cin.ignore();
     }
-void putData() {
+        void putData() {
         cout << "Title: " << title << endl;
         cout << "Price: " << price << endl;
     }};
-class Book : public Publication {
-private:
-    int pageCount;
+            class Book : public Publication {
+             private:
+                         int pageCount;
 
-public:
-    void getData() {
-        Publication::getData();
-        cout << "Enter the page count: ";
-        cin >> pageCount;
-        cin.ignore();
+       public:
+         void getData() {
+          Publication::getData();
+          cout << "Enter the page count: ";
+           cin >> pageCount;
+           cin.ignore();
     }
-    void putData() {
+         void putData() {
         Publication::putData();
         cout << "Page count: " << pageCount << endl;
     }};
-class Tape : public Publication {
-private:
-    float playingTime;
-public:
-    void getData() {
-        Publication::getData();
+            class Tape : public Publication {
+           private:
+             float playingTime;
+              public:
+         void getData() {
+                     Publication::getData();
         cout << "Enter the playing time (in minutes): ";
-        cin >> playingTime;
-       cin.ignore();
+                               cin >> playingTime;
+                           cin.ignore();
     }
    void putData() {
         Publication::putData(); 
